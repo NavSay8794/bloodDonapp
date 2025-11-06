@@ -28,7 +28,8 @@ app.use(cors({
 }));
 
 // Explicitly handle OPTIONS requests
-app.options('*', cors()); 
+// app.options('*', cors());        
+
 app.use('/user', userRoutes)
 app.use('/bloodReq', bloodRoutes)
 
