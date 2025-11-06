@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { register } from "../utils/axiosutil";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [fullName, setFullName] = useState("");
@@ -7,6 +8,8 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
